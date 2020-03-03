@@ -12,8 +12,7 @@ namespace Demo.DAL.Concrete
 {
     public class DemoDbContext:DbContext
     {
-        //public DemoDbContext():base("Server=.; Database=DemoDb; uid=sa; pwd=123;")
-        public DemoDbContext():base(ConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString)
+        public DemoDbContext():base("db bilgileri")
         {
             Database.SetInitializer<DemoDbContext>(new MyStrategy());
         }
