@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "Giriş Yap";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 shadow-sm mt-3 text-center">
+            <h4 class="text-info p-2">Aday Girişi</h4>
+        </div>
+        <div class="col-12 col-md-4 shadow-sm mt-3 pb-3">
+            @if (ViewBag.Error != null)
+            {
+                <div class="mt-2 alert alert-danger"> @ViewBag.Error</div>
+            }
+            <h4 class="border-bottom text-center">Giriş Bilgileri</h4>
+            @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "form-login" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="form-group">
+                    @Html.TextBox("Email", null, htmlAttributes: new { @placeholder = "Email", @class = "form-control", @required="", @type ="email"  })
+                </div>
+                <div class="form-group">
+                    @Html.Password("Password", null, htmlAttributes: new { @placeholder = "Şifre", @class = "form-control", @required = "" })
+                </div>
+                <div class="checkbox">
+                    <label>@Html.CheckBox("Rememberme", true) Beni Hatırla</label>
+                </div>
+                <input type="submit" value="Giriş Yap" class="btn btn-success" />
+                <a href="/uye-ol" class="btn btn-info pull-right">Üye Ol</a>
+            }
+        </div>
+        <div class="col-12 col-md-8 shadow-sm mt-3 text-center">
+            <div class="">
+                <h4 class="border-bottom">Giriş Hakkında</h4>
+                <ul class="text-left pt-2">
+                    <li>Online olarak iş başvuru yapabilmeniz için aday üyeliğiniz olması gerekmektedir.</li>
+                    <li>Sitemizde yer alan tek bir özgeçmiş ile tüm elemanuzmani.com iş ilanlarına başvuru yapabilirsiniz.</li>
+                    <li>İş ilanları arasından size uygun ilanlara özgeçmişinizi kolayca gönderebilirsiniz.</li>
+                    <li>İş arama süresinde elemanuzmani.com daima yanınızda.</li>
+                    <li>Herhangi bir sorun veya problemle karşılarsanız bize her zaman ulaşabilirsiniz.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+

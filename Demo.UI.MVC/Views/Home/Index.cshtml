@@ -1,0 +1,83 @@
+﻿@model IEnumerable<Advert>
+@{
+    ViewBag.Title = "Anasayfa";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 d-none d-md-block">
+            <div id="myCarousel" class="carousel" data-ride="carousel" data-interval="0">
+                <p class=" font-weight-bolder pl-3">Öne Çıkanlar</p>
+                <ol class="carousel-indicators ">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    @for (int i = 1; i < Math.Ceiling(Model.Count() / 12d); i++)
+                    {
+                        <li data-target="#myCarousel" data-slide-to="@(i)"></li>
+                    }
+                </ol>
+                <div class="carousel-inner">
+                    @for (int i = 0; i < Math.Ceiling(Model.Count() / 12d); i++)
+                    {
+                        <div class="item carousel-item">
+                            <div class="row">
+                                @foreach (Advert item in Model.Skip(i * 12).Take(12))
+                                {
+                                    <div class="col-sm-2 text-decoration-none pt-3 ad-item">
+                                        <a href="/@item.ToUrlString()" class="thumb-wrapper pb-1 text-decoration-none text-dark">
+                                            <img src="@item.User.Logo" class="img-responsive img-fluid" height="100" width="100" alt="">
+                                            <p>@item.Name</p>
+                                            <label class="text-black-50">@item.CityString()</label>
+                                        </a>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="container pl-0 pr-0">
+            @foreach (Category item in ViewBag.Favs)
+            {
+                <div class="pull-left col-6 col-md-4 pr-0 pl-0">
+                    <a href="/@item.ToUrlString()" title="@item.Name İş İlanları">
+                        <img class="card-img-top" src="@item.FavImage" alt="@item.Name">
+                    </a>
+                </div>
+            }
+        </div>
+        <p class="mt-4 font-weight-bolder pl-3">İş İlanları</p>
+        <div class="container border adverts">
+            @foreach (Advert item in Model.Take(8))
+            {
+                <div class="pull-left col-6 col-md-4 m-0 p-0">
+                    <a href="/@item.ToUrlString()" class="text-decoration-none">
+                        <div class=" ml-1 mb-1 p-2 mt-1 border shadow-sm">
+                            <p class=" font-weight-bold mt-2 color-blue">@item.Name</p>
+                            <p class="card-text pull-right"><small class="text-muted">@item.User.Name</small></p>
+                            <p class="card-text  text-dark">@item.CityString()</p>
+                        </div>
+                    </a>
+                </div>
+            }
+            @foreach (Advert item in Model.Skip(8).Take(13))
+            {
+                <div class="pull-left col-6 col-md-4 m-0 p-0 d-none d-md-block">
+                    <a href="/@item.ToUrlString()" class="text-decoration-none ">
+                        <div class=" ml-1 mb-1 p-2 mt-1 border shadow-sm">
+                            <p class=" font-weight-bold mt-2 color-blue">@item.Name</p>
+                            <p class="card-text pull-right"><small class="text-muted">@item.User.Name</small></p>
+                            <p class="card-text  text-dark">@item.CityString()</p>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        document.getElementsByClassName("carousel-item")[0].classList.add("active")
+    </script>
+}

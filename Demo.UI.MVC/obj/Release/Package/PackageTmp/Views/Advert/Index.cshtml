@@ -1,0 +1,75 @@
+﻿@model Advert
+@{
+    ViewBag.Title = Model.Name;
+}
+
+<div class="container">
+    <div class="row mt-4">
+        <div class="col-12 col-md-9 p-4">
+            <div class="row border-danger shadow-sm" style="border-left:3px solid">
+                <div class="pb-1 pl-4">
+                    <div class="pt-1">
+                        <a href="/" class="text-decoration-none">İlanlar</a>
+                        <i class="pl-1 fa fa-caret-right"></i>
+                        <a href="/is-ilanlari" class="text-decoration-none">İş İlanları</a>
+                        <i class="pl-1 fa fa-caret-right"></i>
+                        <a href="/@Model.Category.ToUrlString()-is-ilanlari" class="text-decoration-none">@Model.Category.Name İş İlanları</a>
+                    </div>
+                    <h5>@Model.Name</h5>
+                </div>
+            </div>
+            <div class="row shadow mt-3 pb-5">
+                <div class="container-fluid pt-3 pl-4">
+                    <div class="pull-left">
+                        <label class="text-muted pr-3"> İlan No: @Model.ID</label>
+                        <label class="text-muted pr-3"><i class="fa fa-location-arrow"></i> @Model.CityString()</label>
+                        <label class="text-muted"><i class="fa fa-building"></i> @Model.User.Name</label>
+                        <h3 class="color-blue">@Model.Name </h3>
+                    </div>
+                    <div class="pull-right">
+                        <img height="80" src="@Model.User.Logo" class="border mb-2" alt="@Model.Name" />
+                    </div>
+                </div>
+                <div class="border-top container-fluid border-dark pt-3">
+                    <label class="color-blue border-bottom border-dark">İş Tanımı</label>
+                    <p>@Model.Description</p>
+
+                    <label class="color-blue border-bottom border-dark">İletişim</label>
+                    @foreach (string item in Model.Phones)
+                    {
+                        <p> <b class="text-black-50"> Telefon </b> : <span> @item </span> </p>
+                    }
+
+                    <div class="AdDetail">
+                        <label class="color-blue border-bottom border-dark">İlan Bilgileri</label>
+                        <p> <b class="text-black-50"> Yayın Tarihi </b> : <span> @Model.CreatedDate.ToLongDateString() </span> </p>
+                        <p> <b class="text-black-50"> İl </b> : <span> @Model.CityString() </span> </p>
+                        <p> <b class="text-black-50"> Kategori </b> : <span> @Model.Category.Name </span> </p>
+                        <p> <b class="text-black-50"> Cinsiyet </b> : <span> @Model.Gender.ToString() </span> </p>
+                        <p> <b class="text-black-50"> İlan No </b> : <span> @Model.ID </span> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-3 p-1">
+            <div class="border shadow">
+                <div class="p-1">
+                    <h6 class="text-info pb-1 border-bottom border-dark">Diğer İşlemler</h6>
+                    <a href="/@Model.User.ToUrlString()" class="btn btn-info text-white" style="width:100%;">Firmanın Tüm İlanları</a>
+                </div>
+            </div>
+            <div class="border shadow mt-3 d-none d-md-block">
+                <div class="AdOther">
+                    <h6 class="text-info p-1 border-bottom border-dark">İlgilenebileceğiniz İlanlar</h6>
+                    @foreach (Advert item in Model.Category.Adverts.Where(x=>x.CategoryID == Model.CategoryID).Take(7))
+                    {
+                        <a href="/@item.ToUrlString()" target="_blank" class="shadow-sm" title="@item.Name">
+                            <p class="m-0 font-weight-bold" style="font-size:15px;">@item.Name</p>
+                            <p class="text-dark mt-2 mb-0 pb-1"><i class="fa fa-map-marker"></i> @item.CityString()</p>
+                        </a>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+C:\Users\SAMSUNG\Desktop\Site\Demo\Demo.CORE\bin\Release\Demo.CORE.dll.config
+C:\Users\SAMSUNG\Desktop\Site\Demo\Demo.CORE\bin\Release\Demo.CORE.dll
+C:\Users\SAMSUNG\Desktop\Site\Demo\Demo.CORE\bin\Release\Demo.CORE.pdb
+C:\Users\SAMSUNG\Desktop\Site\Demo\Demo.CORE\bin\Release\EntityFramework.dll
+C:\Users\SAMSUNG\Desktop\Site\Demo\Demo.CORE\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\SAMSUNG\Desktop\Site\Demo\Demo.CORE\bin\Release\EntityFramework.xml
+C:\Users\SAMSUNG\Desktop\Site\Demo\Demo.CORE\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\SAMSUNG\Desktop\Site\Demo\Demo.CORE\obj\Release\Demo.CORE.csprojAssemblyReference.cache
+C:\Users\SAMSUNG\Desktop\Site\Demo\Demo.CORE\obj\Release\Demo.CORE.csproj.CopyComplete
+C:\Users\SAMSUNG\Desktop\Site\Demo\Demo.CORE\obj\Release\Demo.CORE.dll
+C:\Users\SAMSUNG\Desktop\Site\Demo\Demo.CORE\obj\Release\Demo.CORE.pdb

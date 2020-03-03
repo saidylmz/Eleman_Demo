@@ -1,0 +1,11 @@
+C:\Users\SAMSUNG\Desktop\Site\Demo\Demo.MODEL\bin\Release\Demo.MODEL.dll
+C:\Users\SAMSUNG\Desktop\Site\Demo\Demo.MODEL\bin\Release\Demo.MODEL.pdb
+C:\Users\SAMSUNG\Desktop\Site\Demo\Demo.MODEL\bin\Release\Demo.CORE.dll
+C:\Users\SAMSUNG\Desktop\Site\Demo\Demo.MODEL\bin\Release\EntityFramework.dll
+C:\Users\SAMSUNG\Desktop\Site\Demo\Demo.MODEL\bin\Release\Demo.CORE.pdb
+C:\Users\SAMSUNG\Desktop\Site\Demo\Demo.MODEL\bin\Release\Demo.CORE.dll.config
+C:\Users\SAMSUNG\Desktop\Site\Demo\Demo.MODEL\bin\Release\EntityFramework.xml
+C:\Users\SAMSUNG\Desktop\Site\Demo\Demo.MODEL\obj\Release\Demo.MODEL.csprojAssemblyReference.cache
+C:\Users\SAMSUNG\Desktop\Site\Demo\Demo.MODEL\obj\Release\Demo.MODEL.csproj.CopyComplete
+C:\Users\SAMSUNG\Desktop\Site\Demo\Demo.MODEL\obj\Release\Demo.MODEL.dll
+C:\Users\SAMSUNG\Desktop\Site\Demo\Demo.MODEL\obj\Release\Demo.MODEL.pdb

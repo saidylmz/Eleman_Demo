@@ -1,0 +1,16 @@
+C:\Users\SAMSUNG\Desktop\Site\Demo\Demo.DAL\bin\Release\Demo.DAL.dll.config
+C:\Users\SAMSUNG\Desktop\Site\Demo\Demo.DAL\bin\Release\Demo.DAL.dll
+C:\Users\SAMSUNG\Desktop\Site\Demo\Demo.DAL\bin\Release\Demo.DAL.pdb
+C:\Users\SAMSUNG\Desktop\Site\Demo\Demo.DAL\bin\Release\Demo.CORE.dll
+C:\Users\SAMSUNG\Desktop\Site\Demo\Demo.DAL\bin\Release\Demo.MODEL.dll
+C:\Users\SAMSUNG\Desktop\Site\Demo\Demo.DAL\bin\Release\EntityFramework.dll
+C:\Users\SAMSUNG\Desktop\Site\Demo\Demo.DAL\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\SAMSUNG\Desktop\Site\Demo\Demo.DAL\bin\Release\Demo.CORE.pdb
+C:\Users\SAMSUNG\Desktop\Site\Demo\Demo.DAL\bin\Release\Demo.CORE.dll.config
+C:\Users\SAMSUNG\Desktop\Site\Demo\Demo.DAL\bin\Release\Demo.MODEL.pdb
+C:\Users\SAMSUNG\Desktop\Site\Demo\Demo.DAL\bin\Release\EntityFramework.xml
+C:\Users\SAMSUNG\Desktop\Site\Demo\Demo.DAL\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\SAMSUNG\Desktop\Site\Demo\Demo.DAL\obj\Release\Demo.DAL.csprojAssemblyReference.cache
+C:\Users\SAMSUNG\Desktop\Site\Demo\Demo.DAL\obj\Release\Demo.DAL.csproj.CopyComplete
+C:\Users\SAMSUNG\Desktop\Site\Demo\Demo.DAL\obj\Release\Demo.DAL.dll
+C:\Users\SAMSUNG\Desktop\Site\Demo\Demo.DAL\obj\Release\Demo.DAL.pdb
